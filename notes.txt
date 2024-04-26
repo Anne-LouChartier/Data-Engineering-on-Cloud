@@ -1,0 +1,25 @@
+Etape 1: Etude des besoins et veille technologique
+--> comprendre besoins du clients ()
+--> Réaliser veille sur techno frameworks big data (reprendre les différentes recherches sur les frameworks et modèles utilisés (turi-create, Surprise...))
+
+Etape 2: Conception de l'architecture distribuée 
+--> Dimensionner les ressources nécessaires
+--> Chosisir les technolgies adaptées 
+--> Définir architecture résiliente et scalable 
+
+Etape 3: Développement des pipelines 
+--> Implémenter l'i,gestion des différentes sources (voir dataset, API externes...)
+--> Développer les transformations ETL (traitement valeurs nulles, get_dummies des valeurs catégorielles, ajout de la colonne commentaires...)
+--> Mettre en place le traitement batch 
+
+Etape 4: Optimisation et monitoring 
+--> Optumiser les performances des pipelines  
+--> Mettre en place les indicateurs de monitoring (taux de valeur nulles, KPI de dta quality reprendre TP Data Management)
+
+Etape 5: Automatisation 
+--> Containeriser
+--> Mettre en place l'intégaration et déploiement continus (CI/CD)
+--> Automatiser les différents tests 
+
+Etape 6:
+SOUTENAAAAAAAANCE
