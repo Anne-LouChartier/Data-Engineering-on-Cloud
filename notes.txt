@@ -1,5 +1,6 @@
 Etape 1: Etude des besoins et veille technologique
 --> comprendre besoins du clients ()
+    But de notre application : 
 --> Réaliser veille sur techno frameworks big data (reprendre les différentes recherches sur les frameworks et modèles utilisés (turi-create, Surprise...))
 
 Etape 2: Conception de l'architecture distribuée 
