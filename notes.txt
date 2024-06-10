@@ -24,3 +24,46 @@ Etape 5: Automatisation
 
 Etape 6:
 SOUTENAAAAAAAANCE
+
+
+
+
+
+
+
+
+UTILISATION de Faker() 
+--> génération de texte sur thématique ()
+--> Revoir si pas possible d'utilisation Llama : 
+
+
+Utilisation TexGen Transformer 
+pip install transformers torch
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
+
+# Charger le modèle et le tokenizer
+model_name = "gpt2"  # Vous pouvez essayer "gpt2-medium", "gpt2-large", etc.
+tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+model = GPT2LMHeadModel.from_pretrained(model_name)
+
+input_text = "La technologie des énergies renouvelables est"
+
+# Encodage du texte de départ
+input_ids = tokenizer.encode(input_text, return_tensors='pt')
+
+# Génération du texte
+output = model.generate(
+    input_ids,
+    max_length=200,  # Nombre maximum de tokens dans le texte généré
+    num_return_sequences=1,  # Nombre de séquences à générer
+    no_repeat_ngram_size=2,  # Évite les répétitions de n-grammes
+    do_sample=True,  # Activation de l'échantillonnage
+    top_k=50,  # Limite les choix à top_k probables
+    top_p=0.95,  # Utilise la décote cumulative
+    temperature=0.7  # Contrôle la créativité du modèle
+)
+
+# Décodage du texte généré
+generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+
+print(generated_text)
